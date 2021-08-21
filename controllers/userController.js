@@ -249,9 +249,11 @@ exports.userNews = async (req, res) => {
     let lists = []
     if(thisUser.role === "User") {
         menu = menus("user", req.session.userId)
-        for (let i = 0; i < thisUser.lists.length; i++) {
-            let list = await List.findOne({_id: thisUser.lists[i]}).lean()
-            lists.push(list)
+        if (thisUser && thisUser.lists && thisUser.lists.length > 0) {
+            for (let i = 0; i < thisUser.lists.length; i++) {
+                let list = await List.findOne({_id: thisUser.lists[i]}).lean()
+                lists.push(list)
+            }
         }
     } else {
         menu = menus("admin")
