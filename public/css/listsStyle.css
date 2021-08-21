@@ -1,0 +1,30 @@
+.list {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 2%;
+    border-bottom: #B9BCC2 dashed 2px;
+}
+.list a{
+    font-size: x-large;
+    text-decoration: none;
+    color: black;
+    transition: color .3s ease;
+}
+.list a:hover{
+    color: #743ad5;
+}
+.list a:active{
+    color: #B9BCC2;
+}
+.list .material-icons.delete {
+    color: gray;
+    transition: color .3s ease;
+}
+.list .material-icons.delete:hover {
+    color: #743ad5;
+    cursor: pointer;
+}
+.list .material-icons.delete:active {
+    color: #B9BCC2;
+}

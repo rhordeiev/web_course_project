@@ -1,0 +1,28 @@
+.content .login-block {
+    min-width: 35vh;
+}
+.content .login-block .register-button {
+    width: 100%;
+    border-top: #B9BCC2 dashed 2px;
+    padding-top: 7%;
+    text-align:center;
+}
+.content .login-block .register-button a {
+    color: gray;
+    display: inline-block;
+    text-decoration: none;
+}
+.content .login-block .register-button a::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    border-bottom: #743ad5 dashed 2px;
+    transition: width .3s;
+}
+.content .login-block .register-button a:hover::after {
+    width: 100%;
+}
+.content .login-block .alert {
+    max-width: 40vh;
+}

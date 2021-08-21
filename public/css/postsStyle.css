@@ -1,0 +1,230 @@
+.content .posts .post {
+    width: 100%;
+    //height: 80vh;
+    margin: 5vh 0;
+    background: whitesmoke;
+    border-radius: 30px;
+    //border: #B9BCC2 dashed 2px;
+    box-shadow:4px 7px 10px rgba(0,0,0,.4);
+}
+.content .posts .post-block {
+    display: flex;
+    justify-content: center;
+    border-bottom: #B9BCC2 dashed 2px;
+    min-width: 90vh;
+
+}
+.content .posts .header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: xx-large;
+    font-weight: bold;
+    font-style: italic;
+}
+.content .posts .header .hidden{
+    visibility: hidden;
+}
+.content .posts .header .clear{
+    padding-right: 10px;
+}
+.content .posts span {
+    padding-left: 10px;
+    text-align: center;
+    color: gray;
+    transition: color .3s ease;
+}
+.content .posts span:last-child {
+    padding-right: 20px;
+}
+.content .posts span:hover {
+    color: #743ad5;
+    cursor: pointer;
+}
+.content .posts span:active {
+    color: #B9BCC2;
+}
+.content .posts .change-buttons {
+    display: flex;
+    align-items: center;
+    border-left: #B9BCC2 dashed 2px;
+}
+.content .posts .dropdown {
+    padding-right: 10px;
+    font-style: normal;
+}
+.content .posts .dropdown-menu a {
+    transition: color .3s ease;
+}
+.content .posts .dropdown-menu a:hover {
+    background-color: transparent;
+    color: #743ad5;
+}
+.content .posts .dropdown-menu a:active {
+    color: #B9BCC2;
+}
+.content .posts img {
+    margin: 20px;
+    object-fit: cover;
+    border-radius: 30px;
+    box-shadow: 0 0 3px #999;
+    transition: all .3s;
+}
+.content .posts img:hover {
+    transform: scale(1.4);
+    box-shadow: none;
+    border-radius: 0;
+}
+.content .posts .creation-info {
+    display: flex;
+    justify-content: space-between;
+    color: gray;
+    padding: 12px 10px 10px 10px;
+}
+.content .posts .creation-info .field-header {
+    font-style: italic;
+    font-weight: bold;
+}
+.content .posts .creation-info a {
+    color: gray;
+    display: inline-block;
+    text-decoration: none;
+}
+.content .posts .creation-info a::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    border-bottom: #743ad5 dashed 2px;
+    transition: width .3s;
+}
+.content .posts .creation-info a:hover::after {
+    width: 100%;
+}
+.content .posts .post-text {
+    display: flex;
+    justify-content: center;
+    text-indent: 2em;
+    padding: 3vh;
+    white-space: pre-wrap;
+    text-align: justify;
+    font-size: 20px;
+}
+.content .posts .post-text p::first-letter {
+    font-size: 200%;
+    font-style: italic;
+    font-weight: bold;
+}
+.content .post-block input {
+    box-shadow: none;
+    border-radius: 10px;
+    margin-top: 6%;
+    width: 300px;
+    margin-right: 45px;
+}
+.content .post-block input:focus {
+    border: #743ad5 dashed 1px;
+    box-shadow: none;
+}
+.content .post-block input[type=file] {
+    border-radius: 0;
+}
+.content .post-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.content .post-text textarea {
+    box-shadow: none;
+    border-radius: 10px;
+    height: 300px;
+    width: 500px;
+}
+.content .post-text textarea:focus {
+    border: #743ad5 dashed 1px;
+    box-shadow: none;
+}
+.content .post-submit-button button {
+    background-color: white;
+    border-radius: 10px;
+    border: lightgray solid 1px;
+    float: right;
+    margin: 2%;
+    width: 300px;
+}
+.content .post-submit-button button:hover {
+    border: #743ad5 dashed 1px;
+}
+.content .post-submit-button button:active {
+    background-color: whitesmoke;
+    box-shadow: none;
+}
+.content .post-submit-button button:focus {
+    box-shadow: none;
+}
+.content .post-text .alert {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-right: 10%;
+    margin-left: 5%;
+    border-radius: 15px;
+    text-align: center;
+}
+.content .post-text .alert .alert-error-text{
+    font-size: 14px;
+}
+.content .modal-content{
+    border-radius: 15px;
+    background-color: whitesmoke;
+}
+.content .modal .modal-header{
+    border-bottom: #B9BCC2 dashed 2px;
+    color: gray;
+}
+.content .modal .modal-footer{
+    border-top: #B9BCC2 dashed 2px;
+}
+.content .modal .modal-footer button{
+    border-color: lightgray;
+    border-radius: 15px;
+    background-color: white;
+    color: black;
+    transition: border .3s ease;
+}
+.content .modal .modal-footer button:hover{
+    border: #743ad5 dashed 1px;
+}
+.content .modal .modal-footer button:active{
+    background-color: gray;
+    border: gray solid 1px;
+    color: white;
+    box-shadow:none !important;
+    outline:0px !important;
+}
+.content .modal .modal-footer button:focus{
+    background-color: gray;
+    border: gray solid 1px;
+    color: white;
+    box-shadow:none !important;
+    outline:0px !important;
+}
+.content .modal .modal-footer #deletePostButton:active{
+    background-color: #743ad5;
+    border: #743ad5 solid 1px;
+    color: white;
+    box-shadow:none !important;
+    outline:0px !important;
+}
+.content .modal .modal-footer #deletePostButton:focus{
+    background-color: #743ad5;
+    border: #743ad5 solid 1px;
+    color: white;
+    box-shadow:none !important;
+    outline:0px !important;
+}
+.content .modal #deletePostButton a{
+    color: black;
+    text-decoration: none;
+}

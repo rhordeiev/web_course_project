@@ -1,0 +1,29 @@
+<link rel="stylesheet" href="/css/listsStyle.css">
+<link rel="stylesheet" href="/css/postsStyle.css">
+{{#each lists}}
+    <div class="list">
+        <a href="/user/lists/{{_id}}" id="{{_id}}">{{name}}</a>
+        <span class="material-icons delete" id="deleteListButton" data-toggle="modal"
+              data-target="#deleteListModal">delete</span>
+    </div>
+{{/each}}
+<div class="modal fade" id="deleteListModal" tabindex="-1" role="dialog" aria-labelledby="deleteListModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="deleteListModalLabel">Видалення поста</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                Ви дійсно хочете видалити цей список?
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" id="deleteListButton">Так</button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Закрити</button>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="/js/deleteList.js"></script>

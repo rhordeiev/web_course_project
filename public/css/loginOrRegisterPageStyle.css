@@ -1,0 +1,120 @@
+.content main {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    background: #2f2f30;
+    min-width: 100vh;
+    min-height: 100vh;
+}
+.content .login-register-block {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 50vh;
+    border-radius: 20px;
+    //border: #B9BCC2 dashed 2px;
+    box-shadow:4px 7px 10px rgba(0,0,0,.4);
+    background-color: whitesmoke;
+    margin: 5% 0;
+    padding: 1% 2%;
+}
+.content input {
+    box-shadow: none;
+    border-radius: 10px;
+}
+.content input:focus {
+    border: #743ad5 dashed 1px;
+    box-shadow: none;
+}
+.content .custom-checkbox .custom-control-input:checked ~ .custom-control-label::before {
+    background-color: #743ad5;
+    border-color: #743ad5;
+    border-style: dashed;
+    box-shadow:none;
+}
+.content .custom-checkbox .custom-control-input:focus ~ .custom-control-label::before {
+    box-shadow:none;
+    border-style: dashed;
+    border-color: #743ad5;
+}
+.content .custom-checkbox .custom-control-input:active ~ .custom-control-label::before {
+    box-shadow:none;
+    border-color: #743ad5;
+    border-style: dashed;
+    background:#743ad5;
+}
+.content .custom-checkbox .custom-control-label::before {
+    border-radius: 0.25rem;
+}
+.content .custom-control-label::before {
+    background-color:white;
+}
+.content .btn-default {
+    border: #B9BCC2 solid 1px;
+    background: white;
+    margin: 15px 0;
+}
+.content .btn-default:hover {
+    border: #743ad5 dashed 1px;
+}
+.content .btn-default:active {
+    border: #743ad5 dashed 1px;
+    background-color: whitesmoke;
+    box-shadow: none;
+}
+.content .btn-default:focus {
+    box-shadow: none;
+}
+.content select {
+    box-shadow: none;
+    border-radius: 10px;
+}
+.content select:focus {
+    border: #743ad5 dashed 1px;
+    box-shadow: none;
+}
+.content textarea {
+    box-shadow: none;
+    border-radius: 10px;
+}
+.content textarea:focus {
+    border: #743ad5 dashed 1px;
+    box-shadow: none;
+}
+.content .logo {
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    font-size: 45px;
+    color: whitesmoke;
+}
+.content .logo .logo-capital-letters {
+    font-size: 60px;
+    font-style: italic;
+    font-weight: bold;
+    color: whitesmoke;
+    background: linear-gradient(to right, #743ad5, #d53a9d);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.content footer {
+    display: flex;
+    justify-content: center;
+    color: gray;
+    border-top: gray dashed 2px;
+    width: 100%;
+}
+.content footer span{
+    display: flex;
+    //padding-top: 4vh;
+    padding: 4vh 0;
+}
+.content .error-block {
+    display: flex;
+    justify-content: left;
+    color: red;
+    font-size: small;
+    padding-bottom: 3%;
+}

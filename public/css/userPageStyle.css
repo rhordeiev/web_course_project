@@ -1,0 +1,348 @@
+.content .user-page{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.content .user-page .user-page-header {
+    display: flex;
+    justify-content: space-between;
+    background: whitesmoke;
+    border-radius: 0 0 10px 10px;
+    box-shadow:4px 7px 10px rgba(0,0,0,.4);
+    min-width: 600px;
+}
+.content .user-page .user-page-header .header-text, .content .user-page .user-info-header .header-text,
+.content .user-page .user-avatar-header .header-text{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: xx-large;
+    font-weight: bold;
+    font-style: italic;
+    padding: 2%;
+}
+.content .user-page .user-page-header .change-buttons, .content .user-page .user-info-header .change-buttons,
+.content .user-page .user-avatar-header .change-buttons {
+    display: flex;
+    align-items: center;
+    border-left: #B9BCC2 dashed 2px;
+    z-index: 1;
+}
+.content .user-page .user-page-header .hidden, .content .user-page .user-info-header .hidden,
+.content .user-page .user-avatar-header .hidden{
+    visibility: hidden;
+}
+.content .user-page .user-page-header .clear, .content .user-page .user-info-header .clear,
+.content .user-page .user-avatar-header .clear{
+    padding-right: 10px;
+}
+.content .user-page .user-page-header span, .content .user-page .user-info-header span,
+.content .user-page .user-avatar-header span {
+    padding-left: 10px;
+    text-align: center;
+    color: gray;
+    transition: color .3s ease;
+}
+.content .user-page .user-page-header span:last-child, .content .user-page .user-info-header span:last-child,
+.content .user-page .user-avatar-header span:last-child {
+    padding-right: 20px;
+}
+.content .user-page .user-page-header span:hover, .content .user-page .user-info-header span:hover,
+.content .user-page .user-avatar-header span:hover {
+    color: #743ad5;
+    cursor: pointer;
+}
+.content .user-page .user-page-header span:active, .content .user-page .user-info-header span:active,
+.content .user-page .user-avatar-header span:active {
+    color: #B9BCC2;
+}
+.content .user-page .user-page-header-update{
+
+}
+.content .user-page .user-page-header-update .header-text{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    font-size: medium;
+    font-weight: normal;
+    font-style: normal;
+    padding-top: 2%;
+    margin-right: 60px;
+}
+.content .user-page .user-page-header-update #updateNameButton{
+    background-color: white;
+    border: lightgray solid 1px;
+    border-radius: 10px;
+}
+.content .user-page .user-page-header-update #updateNameButton:hover{
+    border: #743ad5 dashed 1px;
+}
+.content .user-page .user-page-header-update #updateNameButton:active{
+    background-color: whitesmoke;
+    box-shadow: none;
+}
+.content .user-page .user-page-header-update #updateNameButton:focus{
+    border: #743ad5 dashed 1px;
+    box-shadow: none;
+}
+.content .user-page .user-page-header-update .header-text input{
+    border-radius: 10px;
+    transition: border .3s ease;
+}
+.content .user-page .user-page-header-update .header-text input:focus{
+    border: #743ad5 dashed 1px;
+    box-shadow: none;
+}
+.content .user-page .user-info-header .change-buttons {
+    display: flex;
+    align-items: center;
+    border-left: none;
+}
+.content .user-page .user-avatar{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.content .user-page .user-avatar-header .change-buttons {
+    border-left: none;
+}
+.content .user-page .user-avatar .user-avatar-img {
+    display: flex;
+    justify-content: center;
+}
+.content .user-page .user-avatar .user-avatar-img img{
+    border-radius: 30px;
+    box-shadow:4px 7px 10px rgba(0,0,0,.4);
+    //border: #B9BCC2 dashed 2px;
+    background: whitesmoke;
+    padding: 3px;
+    margin: 7%;
+    object-fit: cover;
+    transition: all .3s;
+    min-width: 42vh;
+}
+.content .user-page .user-avatar img:hover{
+    transform: scale(1.4);
+    box-shadow: none;
+    border-radius: 0;
+    z-index: 1;
+}
+.content .user-page .user-avatar .user-avatar-header {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+    background: whitesmoke;
+    border-radius: 7px 7px 0 0;
+    box-shadow:4px 7px 10px rgba(0,0,0,.4);
+    margin-bottom: -21px;
+    margin-top: 5%;
+    width: 80%;
+}
+.content .user-page .user-avatar-header .header-text{
+    font-size: medium;
+    font-weight: bold;
+}
+.content .user-page .user-avatar .user-avatar-img-update {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: whitesmoke;
+    box-shadow:4px 7px 10px rgba(0,0,0,.4);
+    border-radius: 20px;
+    margin: 7% 7% 7% 7%;
+    padding: 5%;
+    width: 110%;
+
+}
+.content .user-page .user-avatar .user-avatar-img-update #updateAvatarButton{
+    background-color: white;
+    border: lightgray solid 1px;
+    border-radius: 10px;
+}
+.content .user-page .user-avatar .user-avatar-img-update #updateAvatarButton:hover{
+    border: #743ad5 dashed 1px;
+}
+.content .user-page .user-avatar .user-avatar-img-update #updateAvatarButton:active{
+    background-color: whitesmoke;
+    box-shadow: none;
+}
+.content .user-page .user-avatar .user-avatar-img-update #updateAvatarButton:focus{
+    border: #743ad5 dashed 1px;
+    box-shadow: none;
+}
+.content .user-page .user-info {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    //align-items: center;
+    background: whitesmoke;
+    border-radius: 30px;
+    width: 70%;
+    box-shadow:4px 7px 10px rgba(0,0,0,.4);
+}
+.content .user-page .user-info-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: #B9BCC2 dashed 2px;
+    width: 100%;
+    text-align: center;
+    font-size: large;
+    font-weight: bold;
+    font-style: italic;
+}
+.content .user-page .user-info-header .header-text{
+    font-size: x-large;
+    font-weight: bold;
+}
+.content .user-page .user-personal-info {
+    display: flex;
+    flex-direction: column;
+    text-align: justify-all;
+    margin: 2% 10%;
+}
+.content .user-page .user-personal-info .user-personal-info-header{
+    font-weight: bold;
+}
+.content .user-page .user-personal-info #updatePersonalInfoButton{
+    background-color: white;
+    border: lightgray solid 1px;
+    border-radius: 10px;
+}
+.content .user-page .user-personal-info #updatePersonalInfoButton:hover{
+    border: #743ad5 dashed 1px;
+}
+.content .user-page .user-personal-info #updatePersonalInfoButton:active{
+    background-color: whitesmoke;
+    box-shadow: none;
+}
+.content .user-page .user-personal-info #updatePersonalInfoButton:focus{
+    border: #743ad5 dashed 1px;
+    box-shadow: none;
+}
+.content .user-page .user-personal-info input, .content .user-page .user-personal-info select{
+    border-radius: 10px;
+    transition: border .3s ease;
+}
+.content .user-page .user-personal-info input:focus, .content .user-page .user-personal-info select:focus{
+    border: #743ad5 dashed 1px;
+    box-shadow: none;
+}
+.content .user-page .user-personal-info #updateUserInfoButton{
+    background-color: white;
+    border: lightgray solid 1px;
+    border-radius: 10px;
+}
+.content .user-page .user-personal-info #updateUserInfoButton:hover{
+    border: #743ad5 dashed 1px;
+}
+.content .user-page .user-personal-info #updateUserInfoButton:active{
+    background-color: whitesmoke;
+    box-shadow: none;
+}
+.content .user-page .user-personal-info #updateUserInfoButton:focus{
+    border: #743ad5 dashed 1px;
+    box-shadow: none;
+}
+.content .user-page .user-personal-info textarea{
+    border-radius: 10px;
+    transition: border .3s ease;
+}
+.content .user-page .user-personal-info textarea:focus{
+    border: #743ad5 dashed 1px;
+    box-shadow: none;
+}
+.content .user-page p{
+    word-break: break-word;
+    text-indent: 2em;
+}
+.content .user-page p::first-letter {
+    font-size: 200%;
+    font-style: italic;
+    font-weight: bold;
+}
+.content .posts-header {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    font-size: xx-large;
+    font-weight: bold;
+    font-style: italic;
+    background: whitesmoke;
+    margin: 6% 0 0 0;
+    padding: 0 5%;
+    box-shadow:4px 7px 10px rgba(0,0,0,.4);
+}
+.content .posts-add-block {
+    display: flex;
+    align-items: center;
+    margin: 1%;
+    padding: 1%;
+    font-size: x-large;
+    background-color: whitesmoke;
+    box-shadow:4px 7px 10px rgba(0,0,0,.4);
+    border-radius: 10px;
+}
+.content .posts-add-block a{
+    text-decoration: none;
+    color: gray;
+}
+.content .posts-add-block span.material-icons{
+    display: flex;
+    align-items: center;
+    font-size: 50px;
+    color: gray;
+    transition: color .3s ease;
+}
+.content .posts-add-block span.material-icons:hover{
+    color: #743ad5;
+}
+.content .posts-add-block span.material-icons:active {
+    color: #B9BCC2;
+}
+.content .post-and-pagination{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+.content .pagination {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5%;
+
+}
+.content .pagination button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: whitesmoke;
+    padding-bottom: 30%;
+    border-radius: 10px;
+    border: none;
+    height: 60px;
+    width: 60px;
+    font-size: xxx-large;
+    color: gray;
+    text-decoration: none;
+    box-shadow:4px 7px 10px rgba(0,0,0,.4);
+    transition: color .3s ease;
+}
+.content .pagination button:hover {
+    color: #743ad5;
+}
+.content .pagination button:active {
+    color: #B9BCC2;
+}
+.content .pagination-left{
+    margin-right: 100px;
+}
+.content .pagination-right{
+    margin-left: 100px;
+}

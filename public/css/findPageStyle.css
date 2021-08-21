@@ -1,0 +1,72 @@
+main .find-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+main .user-input {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border-radius: 20px;
+    background-color: whitesmoke;
+    width: 100vh;
+    margin-bottom: 5%;
+}
+main .user-input input{
+    margin-top: 3%;
+    width: 95vh;
+    border-radius: 10px;
+    transition: border .3s ease;
+}
+main .user-input input:focus{
+    border: #743ad5 dashed 1px;
+    box-shadow: none;
+}
+main .user-input button{
+    border: lightgray solid 1px;
+    background-color: white;
+    border-radius: 10px;
+    transition: border .3s ease;
+}
+main .user-input button:hover{
+    border: #743ad5 dashed 1px;
+}
+main .user-input button:active{
+    background-color: whitesmoke;
+    box-shadow: none;
+}
+main .user-input button:focus{
+    box-shadow: none;
+}
+main .users {
+    background-color: whitesmoke;
+    width: 100vh;
+    border-radius: 20px;
+}
+main .user {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: 2%;
+    padding: 2%;
+    border-bottom: #B9BCC2 dashed 2px;
+}
+main .user-img img{
+    border-radius: 10px;
+    object-fit: cover;
+}
+main .user-name a{
+    display: flex;
+    justify-content: center;
+    font-size: x-large;
+    text-decoration: none;
+    color: black;
+    transition: color .3s ease;
+}
+main .user-name a:hover{
+    color: #743ad5;
+}
+main .user-name a:focus{
+    color: #B9BCC2;
+}

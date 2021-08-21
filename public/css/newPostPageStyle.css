@@ -1,0 +1,55 @@
+main .post-block {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 50vh;
+    border-radius: 20px;
+    box-shadow:4px 7px 10px rgba(0,0,0,.4);
+    background-color: whitesmoke;
+    margin: 5% 0;
+    padding: 1% 2%;
+}
+main .post-block input, textarea {
+    display: block;
+    width: 500px;
+}
+main .post-block input {
+    box-shadow: none;
+    border-radius: 10px;
+}
+main .post-block input:focus {
+    border: #743ad5 dashed 1px;
+    box-shadow: none;
+}
+main .post-block .btn-default {
+    border: #B9BCC2 solid 1px;
+    background: white;
+    margin: 15px 0;
+}
+main .post-block .btn-default:hover {
+    border: #743ad5 dashed 1px;
+}
+main .post-block .btn-default:active {
+    border: #743ad5 dashed 1px;
+    box-shadow: 0 0 0 0.2rem rgba(116, 58, 213, 0.25);
+}
+main .post-block textarea {
+    box-shadow: none;
+    border-radius: 10px;
+    height: 300px;
+}
+main .post-block textarea:focus {
+    border: #743ad5 dashed 1px;
+    box-shadow: none;
+}
+main .post-block input[type=file] {
+    border-radius: 0;
+}
+main .post-block .alert {
+    display: none;
+    border-radius: 15px;
+}
+main .post-block .alert .alert-error-text{
+    font-size: 14px;
+}

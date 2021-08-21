@@ -1,0 +1,61 @@
+main .new-post {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: 2%;
+    padding: 1%;
+    background-color: whitesmoke;
+    box-shadow:4px 7px 10px rgba(0,0,0,.4);
+    border-radius: 10px;
+}
+main .new-post span.material-icons{
+    display: flex;
+    align-items: center;
+    font-size: 50px;
+    color: gray;
+    cursor: pointer;
+    transition: color .3s ease;
+}
+main .new-post span.material-icons:hover{
+    color: #743ad5;
+}
+main .new-post span.material-icons:active{
+    color: #B9BCC2;
+}
+main .new-post-create {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 9%;
+    padding: 5%;
+    width: 110%;
+
+}
+main .new-post-create input{
+    border-radius: 10px;
+}
+main .new-post-create input:focus{
+    border: #743ad5 dashed 1px;
+    box-shadow: none;
+}
+main .new-post-create #createListButton{
+    background-color: white;
+    border: lightgray solid 1px;
+    border-radius: 10px;
+}
+main .new-post-create #createListButton:hover{
+    border: #743ad5 dashed 1px;
+}
+main .new-post-create #createListButton:active{
+    background-color: whitesmoke;
+    box-shadow: none;
+}
+main .new-post-create #createListButton:focus{
+    border: #743ad5 dashed 1px;
+    box-shadow: none;
+}
+main .lists {
+    background-color: whitesmoke;
+    width: 100vh;
+    border-radius: 20px;
+}

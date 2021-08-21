@@ -1,0 +1,27 @@
+<link rel="stylesheet" href="/css/loggedInPageStyle.css">
+<link rel="stylesheet" href="/css/newPostPageStyle.css">
+<main>
+    <div class="post-block">
+        <form action="newPost?destination={{destination}}" name="newPostForm" method="post" enctype="multipart/form-data"
+              id="newPostForm">
+            <div class="form-group">
+                <label for="postHeader">Введіть заголовок поста:</label>
+                <input type="text" class="form-control" name="postHeader" id="postHeader">
+            </div>
+            <div class="form-group">
+                <label for="postPicture">Оберіть фото профіля:</label>
+                <input type="file" class="form-control-file" name="postPicture" id="postPicture" accept="image/*">
+            </div>
+            <div class="form-group">
+                <label for="postText">Введіть текст поста:</label>
+                <textarea class="form-control" id="postText" name="postText" rows="3"></textarea>
+            </div>
+            <input type="submit" class="btn btn-default" value="Створити" id="submit">
+        </form>
+        <div class="alert alert-danger alert-client-validation">
+            <strong>Помилка створення посту!</strong>
+            <div class="alert-error-text" id="alertClientErrorText"></div>
+        </div>
+    </div>
+</main>
+<script src="/js/postValidation.js"></script>

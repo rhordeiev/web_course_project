@@ -1,0 +1,28 @@
+<div class="login-register-block login-block">
+    {{#if registerSuccess}}
+        <div class="alert alert-success alert-dismissible">
+            <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+            <strong>Ви успішно зареєстровані!</strong>
+        </div>
+    {{/if}}
+    {{#if loginError}}
+        <div class="alert alert-danger alert-dismissible">
+            <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+            <strong>{{loginErrorText}}</strong>
+        </div>
+    {{/if}}
+    <form action="user/loginUser" method="post">
+        <div class="form-group">
+            <label for="loginName">Введіть логін:</label>
+            <input type="text" class="form-control" name="loginName" id="loginName">
+        </div>
+        <div class="form-group">
+            <label for="loginPassword">Введіть пароль:</label>
+            <input type="password" class="form-control" name="loginPassword" id="loginPassword">
+        </div>
+        <button type="submit" class="btn btn-default">Увійти</button>
+    </form>
+    <div class="register-button">
+        <a href="/register">Зареєструватись</a>
+    </div>
+</div>

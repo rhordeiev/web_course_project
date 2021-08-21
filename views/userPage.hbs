@@ -1,0 +1,133 @@
+<link rel="stylesheet" href="/css/loggedInPageStyle.css">
+<link rel="stylesheet" href="/css/userPageStyle.css">
+<main>
+    <div class="user-page">
+        <div class="user-page-header">
+            {{#if userPrivilege.admin }}
+                <div class="hidden">
+                    <span class="material-icons delete" data-toggle="modal" data-target="#deleteUserModal">delete</span>
+                </div>
+                <div class="header-text" id="userNameAndSurname">{{user.name}} {{user.surname}}</div>
+                <div class="change-buttons">
+                    <span class="material-icons delete" id="deleteUser" data-toggle="modal" data-target="#deleteUserModal">delete</span>
+                </div>
+            {{else}}
+                {{#if userPrivilege.thisUser }}
+                    <div class="hidden">
+                        <span class="material-icons update">edit</span>
+                        <span class="material-icons delete" data-toggle="modal" data-target="#deleteUserModal">delete</span>
+                    </div>
+                    <div class="header-text" id="userNameAndSurname">{{user.name}} {{user.surname}}</div>
+                    <div class="change-buttons">
+                        <span class="material-icons update" id="updateUserName">edit</span>
+                        <span class="material-icons delete" id="deleteUser" data-toggle="modal" data-target="#deleteUserModal">delete</span>
+                    </div>
+                {{else}}
+                    <div></div>
+                    <div class="header-text" id="userNameAndSurname">{{user.name}} {{user.surname}}</div>
+                    <div></div>
+                {{/if}}
+            {{/if}}
+        </div>
+        <div class="user-avatar">
+            <div class="user-avatar-header">
+                {{#if userPrivilege.thisUser }}
+                    <div class="hidden">
+                        <span class="material-icons update">edit</span>
+                    </div>
+                    <div class="header-text">Фото профіля</div>
+                    <div class="change-buttons">
+                        <span class="material-icons update" id="updateUserAvatar">edit</span>
+                    </div>
+                {{else}}
+                    <div></div>
+                    <div class="header-text">Фото профіля</div>
+                    <div></div>
+                {{/if}}
+            </div>
+            <div class="user-avatar-img">
+                <img src="/image/{{user.avatar}}" alt="Фото профіля" id="userAvatar" width="300vh" height="350vh">
+            </div>
+        </div>
+        <div class="user-info">
+            <div class="user-info-header">
+                {{#if userPrivilege.thisUser }}
+                    <div class="hidden">
+                        <span class="material-icons update">edit</span>
+                    </div>
+                    <div class="header-text">Персональна інформація</div>
+                    <div class="change-buttons">
+                        <span class="material-icons update" id="updatePersonalInfo">edit</span>
+                    </div>
+                {{else}}
+                    <div></div>
+                    <div class="header-text">Персональна інформація</div>
+                    <div></div>
+                {{/if}}
+            </div>
+            <div class="user-personal-info user-personal-main-info">
+                <span class="user-personal-info-header">Дата народження: </span> <span id="userBirthDate">{{user.birthDate}}</span>
+                <span class="user-personal-info-header">Стать: </span> <span id="userGender">{{user.gender}}</span>
+                <span class="user-personal-info-header">Пошта: </span> <span id="userEmail">{{user.email}}</span>
+            </div>
+            <div class="user-info-header">
+                {{#if userPrivilege.thisUser }}
+                    <div class="hidden">
+                        <span class="material-icons update">edit</span>
+                    </div>
+                    <div class="header-text">Про себе</div>
+                    <div class="change-buttons">
+                        <span class="material-icons update" id="updateUserInfo">edit</span>
+                    </div>
+                {{else}}
+                    <div></div>
+                    <div class="header-text">Про себе</div>
+                    <div></div>
+                {{/if}}
+            </div>
+            <div class="user-personal-info  user-personal-additional-info">
+                <p id="userInfo">{{user.info}}</p>
+            </div>
+        </div>
+        <div class="posts-header">
+            Пости
+        </div>
+        {{#if userPrivilege.thisUser }}
+            <div class="posts-add-block">
+                <a href="post/new?destination=user"><span class="material-icons" data-toggle="tooltip" data-placement="top" title="Додати пост">control_point</span></a>
+            </div>
+        {{/if}}
+        <div class="post-and-pagination">
+            <div class="pagination pagination-left">
+                <button class="btn btn-default">&laquo;</button>
+            </div>
+            <div class="posts">
+                {{> posts}}
+            </div>
+            <div class="pagination pagination-right">
+                <button class="btn btn-default">&raquo;</button>
+            </div>
+        </div>
+        <div class="modal fade" id="deleteUserModal" tabindex="-1" role="dialog" aria-labelledby="deleteUserModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="deleteUserModalLabel">Видалення сторінки</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        Ви дійсно хочете видалити цю сторінку?
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" id="deletePostButton"><a href="/user/deleteUser?userId={{user._id}}">Так</a></button>
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Закрити</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+<script src="/js/pagination.js"></script>
+<script src="/js/changeUser.js"></script>

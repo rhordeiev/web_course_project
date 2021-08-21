@@ -1,0 +1,19 @@
+<link rel="stylesheet" href="/css/loginOrRegisterPageStyle.css">
+{{#if register}}
+    <link rel="stylesheet" href="/css/registerPageStyle.css">
+{{else}}
+    <link rel="stylesheet" href="/css/loginPageStyle.css">
+{{/if}}
+<main>
+    <div class="logo border-gradient-bottom border-gradient-purple-bottom">
+        <span class="logo-capital-letters">M</span>usic<span class="logo-capital-letters">N</span>ews
+    </div>
+    {{#if register}}
+        {{> register}}
+    {{else}}
+        {{> login}}
+    {{/if}}
+    <footer>
+        <span>Copyright © mn.com, 2021. All rights reserved</span>
+    </footer>
+</main>

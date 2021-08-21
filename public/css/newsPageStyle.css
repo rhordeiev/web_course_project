@@ -1,0 +1,26 @@
+main .new-post {
+    display: flex;
+    align-items: center;
+    margin: 2%;
+    padding: 1%;
+    font-size: x-large;
+    background-color: whitesmoke;
+    box-shadow:4px 7px 10px rgba(0,0,0,.4);
+    border-radius: 10px;
+}
+main .new-post a{
+    text-decoration: none;
+}
+main .new-post span.material-icons{
+    display: flex;
+    align-items: center;
+    font-size: 70px;
+    color: gray;
+    transition: color .3s ease;
+}
+main .new-post span.material-icons:hover{
+    color: #743ad5;
+}
+main .new-post span.material-icons:active{
+    color: #B9BCC2;
+}

@@ -1,0 +1,125 @@
+<link rel="stylesheet" href="/css/postsStyle.css">
+<div class="post" id="{{post._id}}">
+    <div class="post-block header" id="header">
+        {{#if userPrivilege.thisUser}}
+            <div class="hidden">
+                <span class="material-icons change-buttons-elem">more_vert</span>
+                <span class="material-icons update change-buttons-elem">edit</span>
+                <span class="material-icons delete change-buttons-elem">delete</span>
+            </div>
+            <div class="header-text">{{post.header}}</div>
+            <div class="change-buttons">
+                <div class="dropdown change-buttons-elem" id="addToListButton">
+                    <span class="material-icons" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        more_vert
+                    </span>
+                    <div class="dropdown-menu change-buttons-elem" aria-labelledby="dropdownMenuButton">
+                        <h6 class="dropdown-header">Додати до списку:</h6>
+                        {{#each lists}}
+                            <a class="dropdown-item" href="/user/lists/addToList/{{_id}}?postId={{../post._id}}" id="{{_id}}"> {{name}} </a>
+                        {{/each}}
+                    </div>
+                </div>
+                <span class="material-icons update change-buttons-elem" id="updatePostButton">edit</span>
+                <span class="material-icons delete change-buttons-elem" id="deletePostButton" data-toggle="modal" data-target="#deleteModal">delete</span>
+            </div>
+        {{else}}
+            {{#if isNewsPage }}
+                <div class="hidden">
+                    <span class="material-icons update change-buttons-elem">edit</span>
+                    <span class="material-icons delete change-buttons-elem">delete</span>
+                </div>
+                <div class="header-text">{{post.header}}</div>
+                <div class="change-buttons">
+                    <span class="material-icons update change-buttons-elem" id="updatePostButton">edit</span>
+                    <span class="material-icons delete change-buttons-elem" id="deletePostButton" data-toggle="modal" data-target="#deleteModal">delete</span>
+                </div>
+            {{else}}
+                {{#if userPrivilege.admin}}
+                    <div class="hidden">
+                        <span class="material-icons delete change-buttons-elem">delete</span>
+                    </div>
+                    <div class="header-text">{{post.header}}</div>
+                    <div class="change-buttons">
+                        <span class="material-icons delete change-buttons-elem" id="deletePostButton" data-toggle="modal" data-target="#deleteModal">delete</span>
+                    </div>
+                {{else}}
+                    {{#if isListPage}}
+                        <div class="hidden">
+                            <span class="material-icons change-buttons-elem">more_vert</span>
+                            <span class="material-icons delete change-buttons-elem" id="deletePostFromListButton" data-toggle="modal" data-target="#deleteModal">delete</span>
+                        </div>
+                        <div class="header-text">{{post.header}}</div>
+                        <div class="change-buttons">
+                            <div class="dropdown change-buttons-elem" id="addToListButton">
+                            <span class="material-icons" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                more_vert
+                            </span>
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                    <h6 class="dropdown-header">Додати до списку:</h6>
+                                    {{#each lists}}
+                                        <a class="dropdown-item" href="/user/lists/addToList/{{_id}}?postId={{../post._id}}" id="{{_id}}"> {{name}} </a>
+                                    {{/each}}
+                                </div>
+                            </div>
+                            <span class="material-icons delete change-buttons-elem" id="deletePostFromListButton" data-toggle="modal" data-target="#deletePostFromListModal">delete</span>
+                        </div>
+                    {{else}}
+                        <div class="hidden">
+                            <span class="material-icons change-buttons-elem">more_vert</span>
+                        </div>
+                        <div class="header-text">{{post.header}}</div>
+                        <div class="change-buttons">
+                            <div class="dropdown change-buttons-elem" id="addToListButton">
+                            <span class="material-icons" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                more_vert
+                            </span>
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                    <h6 class="dropdown-header">Додати до списку:</h6>
+                                    {{#each lists}}
+                                        <a class="dropdown-item" href="/user/lists/addToList/{{_id}}?postId={{../post._id}}" id="{{_id}}"> {{name}} </a>
+                                    {{/each}}
+                                </div>
+                            </div>
+                        </div>
+                    {{/if}}
+                {{/if}}
+            {{/if}}
+        {{/if}}
+    </div>
+    <div class="post-block post-picture">
+        <img src="/image/{{post.picture}}" alt="Картинка поста" width="80%" height="400vh" id="picture">
+    </div>
+    <div class="post-block creation-info">
+        <div class="created-at">
+            <span class="field-header">Час створення:</span> <span id="creationDate">{{post.creationDate}}</span>
+        </div>
+        <div class="created-by">
+            <span class="field-header">Автор:</span> <a href="/user/{{post.ownerId}}" id="ownerInfo">{{post.ownerName}}</a>
+        </div>
+    </div>
+    <div class="post-text">
+        <p id="text">{{post.text}}</p>
+    </div>
+    <div class="modal fade" id="deleteModal" tabindex="-1" role="dialog" aria-labelledby="deleteModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="deleteModalLabel">Видалення поста</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    Ви дійсно хочете видалити даний пост?
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" id="deletePostButton"><a href="/user/post/deletePost/{{post._id}}">Так</a></button>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Закрити</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="/js/changePost.js"></script>
+<script src="/js/addToList.js"></script>

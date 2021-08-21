@@ -1,0 +1,32 @@
+.border-gradient {
+    border: 10px solid;
+    border-image-slice: 1;
+    border-width: 5px;
+}
+.border-gradient-purple {
+    border-image-source: linear-gradient(to right, #743ad5, #d53a9d);
+}
+.border-gradient-right {
+    border-right: 10px solid;
+    border-image-slice: 1;
+    border-right-width: 5px;
+}
+.border-gradient-purple-right {
+    border-image-source: linear-gradient(to bottom, #743ad5, #d53a9d);
+}
+.border-gradient-bottom {
+    border-bottom: 10px solid;
+    border-image-slice: 1;
+    border-bottom-width: 5px;
+}
+.border-gradient-purple-bottom {
+    border-image-source: linear-gradient(to left, #743ad5, #d53a9d);
+}
+.border-gradient-top {
+    border-top: 10px solid;
+    border-image-slice: 1;
+    border-top-width: 5px;
+}
+.border-gradient-purple-top {
+    border-image-source: linear-gradient(to right, #743ad5, #d53a9d);
+}

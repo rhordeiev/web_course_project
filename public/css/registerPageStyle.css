@@ -1,0 +1,13 @@
+.content .register-block {
+    min-width: 60vh;
+}
+.content .register-block input {
+    //padding-right: 20vh;
+}
+.content .register-block input, select, textarea {
+    display: block;
+    width: 400px;
+}
+.content input[type=file] {
+    border-radius: 0;
+}

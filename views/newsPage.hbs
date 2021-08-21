@@ -1,0 +1,41 @@
+<link rel="stylesheet" href="/css/loggedInPageStyle.css">
+<link rel="stylesheet" href="/css/userPageStyle.css">
+<link rel="stylesheet" href="/css/newsPageStyle.css">
+<main>
+    {{#if userPrivilege.admin}}
+        <div class="new-post">
+            <a href="post/new?destination=news"><span class="material-icons" data-toggle="tooltip" data-placement="top" title="Додати пост">control_point</span></a>
+        </div>
+    {{/if}}
+    <div class="post-and-pagination">
+        <div class="pagination pagination-left">
+            <button class="btn btn-default">&laquo;</button>
+        </div>
+        <div class="posts">
+            {{> posts}}
+        </div>
+        <div class="pagination pagination-right">
+            <button class="btn btn-default">&raquo;</button>
+        </div>
+    </div>
+    <div class="modal fade" id="deleteModal" tabindex="-1" role="dialog" aria-labelledby="deleteModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="deleteModalLabel">Видалення поста</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    Ви дійсно хочете видалити даний пост?
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" id="deletePostButton"><a href="/user/post/deletePost/{{post._id}}">Так</a></button>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Закрити</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+<script src="/js/pagination.js"></script>
