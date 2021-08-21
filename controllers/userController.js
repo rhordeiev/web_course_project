@@ -166,9 +166,11 @@ exports.userPage = async (req, res) => {
         }
     }
     let lists = []
-    for (let i = 0; i < thisUser.lists.length; i++) {
-        let list = await List.findOne({_id: thisUser.lists[i]}).lean()
-        lists.push(list)
+    if (thisUser && thisUser.lists && thisUser.lists.length > 0) {
+        for (let i = 0; i < thisUser.lists.length; i++) {
+            let list = await List.findOne({_id: thisUser.lists[i]}).lean()
+            lists.push(list)
+        }
     }
     res.render("userPage", {
         layout: 'layout.hbs',
